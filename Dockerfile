@@ -12,4 +12,6 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh 
 && bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 \
 && rm ~/miniconda3/miniconda.sh
 
+RUN echo "export PATH=~/miniconda3/bin:$PATH" >> ~/.bashrc
+
 RUN git clone https://github.com/dbarnett/python-helloworld
